@@ -1,0 +1,84 @@
+body{
+    margin:0;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+/* .menu-area{
+    min-height:100px;
+   */
+.menu-area{
+    background-color:aqua;
+}
+   .menu-area:after{
+       content:'';
+       display:block;
+       clear:both;
+      
+   }
+.menu-area>ul>li{
+    float:left;
+}
+.menu-area li{
+    position:relative;
+}
+
+.menu-area ul{
+    margin:0;
+    list-style:none;
+}
+.menu-area ul .anything a{
+    background-color:yellowgreen; 
+}
+.menu-area a{
+    text-decoration:none;
+    color:black;
+    text-transform:capitalize;
+    padding:10px 20px;
+    display:block;
+}
+.menu-area ul li:hover a{
+    background-color:yellowgreen;
+}
+ /* sub menu */
+ .menu-area ul ul {
+     padding-left:0;
+     position:absolute;
+     left:0;
+     top:100%;
+     min-width:200px;
+     display:none;
+     z-index:999;
+ }
+ .menu-area ul li:hover>ul{
+     display:block;
+ } 
+ .menu-area ul ul li:hover a{
+     background-color: bisque;
+ }
+ .menu-area ul ul ul{
+     top:0;
+     left:100%;
+    
+ }
+
+ @media all and (max-width: 768px) {
+     .menu-area ul li{
+         width:100%;
+     }
+     .menu-area ul{
+         padding-left:0;
+     }
+     .menu-area ul ul{
+         display:block;
+         position: inherit;
+         
+     }
+     .menu-area ul li:hover a{
+        background-color:transparent;
+     }
+     .menu-area ul ul li a{
+         text-indent: 20px;
+     }
+     .menu-area ul ul li a:before{
+         content:'-'
+     }
+ }
